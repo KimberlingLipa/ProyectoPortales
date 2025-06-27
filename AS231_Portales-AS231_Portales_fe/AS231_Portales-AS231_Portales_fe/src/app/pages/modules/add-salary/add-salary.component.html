@@ -1,0 +1,59 @@
+<div class="header__top">
+  <h2>Agregar Nuevo Salario</h2>
+</div>
+
+<div class="container__form">
+  <div class="container">
+    <div class="title">Detalles del Salario</div>
+
+    <form [formGroup]="salaryForm" (ngSubmit)="onSubmit()" class="form__salary">
+      <div class="row1">
+        <div class="container__input__name">
+          <label>Puestos </label>
+          <select id="workerId" formControlName="workerId" class="form__input">
+            <option value="" disabled selected>Seleccionar un Puestos </option>
+            <option *ngFor="let worker of workers" [value]="worker.id">{{ worker.position }}</option>
+          </select>
+        </div>
+        <div class="container__input__lastname">
+          <label>Salario Base</label>
+          <input
+            type="number"
+            placeholder="5000"
+            id="baseSalary"
+            formControlName="baseSalary"
+            class="form__input"
+          />
+        </div>
+      </div>
+      <div class="row1">
+        <div class="container__input__name">
+          <label>Bonificación</label>
+          <input
+            type="number"
+            placeholder="500"
+            id="bonus"
+            formControlName="bonus"
+            class="form__input"
+          />
+        </div>
+        <div class="container__input__lastname">
+          <label>Deducciones</label>
+          <input
+            type="number"
+            placeholder="200"
+            id="deductions"
+            formControlName="deductions"
+            class="form__input"
+          />
+        </div>
+      </div>
+      <div class="container__button">
+        <button class="btn__save">Guardar</button>
+        <button type="button" class="btn__cancel" (click)="onCancel()">
+          Cancelar
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

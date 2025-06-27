@@ -1,0 +1,115 @@
+.header__top {
+  width: 100%;
+  padding: 16px 32px;
+  color: #4d44b5;
+}
+
+.search__criteria {
+  width: 100%;
+  padding: 32px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.search__criteria .options {
+  width: 250px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn__employee__inactives {
+  padding: 10px 16px;
+  border-radius: 14px;
+  border: none;
+  color: #fff;
+  background-color: #9d89ff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.input__search {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 10px;
+}
+
+.input__search:focus {
+  outline: 2px solid #4d44b5;
+}
+
+.container__table {
+  max-height: 420px;
+  overflow-y: auto;
+  padding: 16px 32px;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  font-size: 14px;
+  border-radius: 10px;
+  overflow: hidden;
+  font-weight: 500;
+}
+
+.table tr th {
+  color: #4d44b5;
+}
+
+.table th,
+.table td {
+  border-bottom: 1px solid #cecece;
+}
+
+.table th {
+  padding: 16px 0;
+}
+
+.table td {
+  padding: 16px;
+}
+
+.table th {
+  background-color: #fff;
+}
+
+.btn-add {
+  padding: 10px 16px;
+  border-radius: 14px;
+  border: none;
+  color: #fff;
+  background-color: #4d44b5;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.actions {
+  display: flex;
+  gap: 4px;
+}
+
+.btn__edit {
+  padding: 8px 10px;
+  background-color: #cecece;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.btn__delete {
+  padding: 8px 10px;
+  background-color: #d60000;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  border-radius: 4px;
+}
+
+.btn__delete:hover {
+  background-color: #e60c0c;
+}

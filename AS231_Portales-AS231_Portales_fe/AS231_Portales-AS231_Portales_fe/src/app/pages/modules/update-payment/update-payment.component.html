@@ -1,0 +1,49 @@
+<div class="header__top">
+  <h2>Actualizar Pago</h2>
+</div>
+
+<div class="container__form">
+  <div class="container">
+    <div class="title">Detalles del Pago</div>
+
+    <form [formGroup]="paymentForm" (ngSubmit)="onSubmit()" class="form__payment">
+      <div class="row1">
+        <div class="container__input__lastname">
+          <label>Fecha de Pago</label> <br />
+          <input
+            type="date"
+            id="paymentDate"
+            formControlName="paymentDate"
+            class="form__input"
+          />
+        </div>
+        <div class="container__input__name">
+          <label>Puestos </label> <br />
+          <select id="workerId" formControlName="workerId" class="form__input">
+            <option *ngFor="let worker of workers" [value]="worker.id">
+              {{ worker.position }}
+            </option>
+          </select>
+        </div>
+      </div>
+      <div class="row1">
+        <div class="container__input__name">
+          <label>Monto</label> <br />
+          <input
+            type="number"
+            placeholder="5000"
+            id="amount"
+            formControlName="amount"
+            class="form__input"
+          />
+        </div>
+      </div>
+      <div class="container__button">
+        <button class="btn__save">Guardar</button>
+        <button type="button" class="btn__cancel" (click)="onCancel()">
+          Cancelar
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

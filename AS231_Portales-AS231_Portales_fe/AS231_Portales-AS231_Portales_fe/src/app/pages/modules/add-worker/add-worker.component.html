@@ -1,0 +1,52 @@
+<div class="header__top">
+  <h2>Agregar Nuevo Puestos </h2>
+</div>
+
+<div class="container__form">
+  <div class="container">
+    <div class="title">Detalles Personales</div>
+
+    <form [formGroup]="workerForm" (ngSubmit)="onSubmit()" class="form__worker">
+      <div class="row1">
+        <div class="container__input__lastname">
+          <label>Puestos </label>
+          <input
+            type="text"
+            placeholder="Desarrollador"
+            id="position"
+            formControlName="position"
+            class="form__input"
+          />
+        </div>
+        <div class="container__input__name">
+          <label>Nombre</label>
+          <input
+            type="text"
+            placeholder="Juan"
+            id="name"
+            formControlName="name"
+            class="form__input"
+          />
+        </div>
+      </div>
+      <div class="row1">
+        <div class="container__input__name">
+          <label>Departamento</label>
+          <input
+            type="text"
+            placeholder="TI"
+            id="department"
+            formControlName="department"
+            class="form__input"
+          />
+        </div>
+      </div>
+      <div class="container__button">
+        <button class="btn__save">Guardar</button>
+        <button type="button" class="btn__cancel" (click)="onCancel()">
+          Cancelar
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

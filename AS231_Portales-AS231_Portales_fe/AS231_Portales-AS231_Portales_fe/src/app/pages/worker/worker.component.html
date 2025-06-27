@@ -1,0 +1,78 @@
+<div class="header__top">
+  <h2>Puestos</h2>
+</div>
+
+<div class="search__criteria">
+  <div>
+    <input
+      class="input__search"
+      type="text"
+      placeholder="Buscar..."
+      (input)="filterWorkers($event)"
+    />
+  </div>
+  <div class="options">
+    <button routerLink="/workers/new" class="btn-add">
+      <svg
+        width="10"
+        height="10"
+        viewBox="0 0 17 17"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M6.34703 10.1647H0.382324V5.92941H6.34703V0H10.5823V5.92941H16.6176V10.1647H10.5823V16.1647H6.34703V10.1647Z"
+          fill="white"
+        />
+      </svg>
+      Nuevo Puestos
+    </button>
+    <button routerLink="/workers/inactives" class="btn-add">
+      <svg
+        width="10"
+        height="10"
+        viewBox="0 0 17 17"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M6.34703 10.1647H0.382324V5.92941H6.34703V0H10.5823V5.92941H16.6176V10.1647H10.5823V16.1647H6.34703V10.1647Z"
+          fill="white"
+        />
+      </svg>
+      Puestos Inactivos
+    </button>
+  </div>
+</div>
+
+<div class="container__table">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Puestos </th>
+        <th>Departamento</th>
+        <th>Nombre</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let worker of filteredWorkers">
+        <td>{{ worker.position }}</td>
+        <td>{{ worker.department }}</td>
+        <td>{{ worker.name }}</td>
+        <td class="actions">
+          <div>
+            <button (click)="updateWorker(worker.id)" class="btn__edit">
+              Editar
+            </button>
+          </div>
+          <div>
+            <button (click)="deleteWorker(worker.id)" class="btn__delete">
+              Eliminar
+            </button>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
